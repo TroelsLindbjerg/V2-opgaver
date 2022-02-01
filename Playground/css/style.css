@@ -1,0 +1,25 @@
+.item-a{
+    grid-area: header;
+    background-color: brown;
+}
+.item-b{
+    grid-area: main;
+    color: purple;
+}
+.item-c{
+    grid-area: sidebar;
+    font-size: larger;
+}
+.item-d{
+    grid-area: footer;
+    padding: 40px;
+}
+.container{
+    display: grid;
+    grid-template-columns:repeat(4,50px) ;
+    grid-template-rows: auto;
+    grid-area: 
+        "header header header header"
+        "main main .sidebar"
+        "footer footer footer footer";
+}
