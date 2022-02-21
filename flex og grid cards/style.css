@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+div{
+    background-color: red;
+    height: 100px;
+    margin: 20px;
+}
+body{
+    background-color: hsl(200, 18%, 97%);
+    display: grid;
+    place-items: center;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(1, 200px);
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "sec1"
+        "sec2"
+        "sec3"
+        "sec4"
+        "sec5"
+        "sec6"
+        "sec7";
+}
+.sec1{
+    grid-area: sec1;
+}
+.sec2{
+    grid-area: sec2;
+}
+.sec3{
+    grid-area: sec3;
+}
+.sec4{
+    grid-area: sec4;
+}
+.sec5{
+    grid-area: sec5;
+}
+.sec6{
+    grid-area: sec6;
+}
+.sec7{
+    grid-area: sec7;
+}
+section{
+    background-color: white;
+    box-shadow: 3px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 1px 1px 2px hsl(0, 10%, 82%);
+}
+section > p{
+    color: rgb(143, 143, 143);
+    font-size: 13px;
+}
+p{
+    font-size: 14px;
+}
+p,h3,h2{
+    padding-inline: 15px;
+}
+img:not(.mal){
+    height: 150px;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+.mal{
+    height: 300px;
+}
+@media (min-width: 1180px) and (max-width: 1919px) {
+    main{
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "sec1 sec1"
+            "sec2 sec3"
+            "sec4 sec5"
+            "sec6 sec7";
+    }
+}
+@media (min-width: 1920px) {
+    main{
+        grid-template-columns: repeat(4, 300px);
+        grid-template-rows: auto;
+        grid-template-areas: 
+                        "sec1 sec1 sec2 sec3"
+                        "sec4 sec5 sec6 sec7";
+    }
+}
