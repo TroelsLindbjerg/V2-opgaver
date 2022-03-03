@@ -4,8 +4,8 @@
 :root{
     --green:hsl(94, 50%, 51%);
     --yellow:hsl(49, 84%, 57%);
-    --grey:hsl(0, 0%, 20%) ;
-    --white:hsl(0, 0%, 100%) ;
+    --grey:hsl(0, 0%, 20%);
+    --white:hsl(0, 0%, 100%);
     --black:hsl(0, 0%, 0%);
 }
 
@@ -13,7 +13,6 @@
 *{
     margin: 0;
     padding: 0;
-    
 }
 
 body {
@@ -131,10 +130,6 @@ h1 {
 /*-----------------------------------------------6-------------------------------------------------*/
 .customer-service {
     background-color: var(--yellow);
-}
-
-.customer-service  .customer-service-section > div {
-    
 }
 
 .content ul {

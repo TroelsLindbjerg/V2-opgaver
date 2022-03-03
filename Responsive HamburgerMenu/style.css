@@ -102,8 +102,9 @@ nav .menu-btn:checked ~ ul {
     display: flex;
     flex-direction: column;
     place-items: center;  
-    background-color: gold;  
+    background-color: hsl(0, 0%, 50%);  
 }
+
 
 /* Særlig styling til desktop - minimum viewport bredde på 768 pixels */
 

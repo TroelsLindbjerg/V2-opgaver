@@ -21,10 +21,13 @@ main section article img
     width: 100%;
 }
 
+div {
+    background-color: hsl(180, 25%, 25%);
+}
+
 h1
 {
     height: 100px;
-    background-color: hsl(180, 25%, 25%);
     color: whitesmoke;
     font-size: 3rem;
     letter-spacing: 0.3rem;
@@ -187,6 +190,25 @@ main>span img
     {
         font-size: 4rem;
         letter-spacing: 1rem;
+        animation: titel 2s linear;
+    }
+
+    @keyframes titel {
+        0% {
+            transform: translateX(100%) rotateY(0deg);
+        }
+        25% {
+            transform: translateX(75%) rotateY(90deg);
+        }
+        50% {
+            transform: translateX(50%) rotateY(180deg);
+        }
+        75% {
+            transform: translateX(25%) rotateY(270deg);
+        }
+        100% {
+            transform: translatex(0%) rotateY(360deg);
+        }
     }
 
     /* Checkbox og hamburger menu ikon vises ikke på desktop */
@@ -235,9 +257,9 @@ main>span img
         position: absolute;
         background-color: #808080;
         text-transform: none;
-        width: 235px;
         font-size: 20px;
         text-align: left;
+        width: 227.37px;
     }
     
     /* Når brugeren hover over det overliggende menupunkt, skal dropdown menuen vises */
@@ -272,8 +294,6 @@ main>span img
     }
     
     /* Dropdown Menu Animation */
-
-
 
 }
 
