@@ -1,0 +1,327 @@
+:root {
+    --Orange:hsl(16, 99%, 65%);
+    --SortTekst:hsl(0, 0%, 20%);
+    --BrunTekst:hsl(19, 25%, 26%);
+    --LightgreyTekst:hsl(0, 0%, 44%);
+    --PrimærBgdColor:hsl(20, 100%, 98%);
+    --MånedensBogColor:hsl(48, 71%, 99%);
+    --hpBGD:hsl(0, 86%, 97%);
+}
+
+/* Titel font & btns: font-family: 'Open Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+/* Body Text font: font-family: 'Hubballi', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+
+/* Affects the whole site */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--PrimærBgdColor);
+}
+    /*!!!!!!!!!!!!!!!flexbox!!!!!!!!!!!!!!!!!!!*/
+.wrapper {
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+/* Header - Navigation */
+h1 {
+    font-size: 3rem;
+    font-family: 'Open Sans', sans-serif;
+}
+span {
+    color: var(--Orange);
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: var(--BrunTekst);
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+    font-family: 'Hubballi', cursive;
+    color: var(--BrunTekst);
+}
+
+    /* Menu btn start */
+nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+nav .menu-btn {
+    display: block;
+    width: 3rem;
+    z-index: 7;
+    opacity: 0;
+    cursor: pointer;
+}
+
+nav .menu-btn ~ .menuIcon {
+    display: block;
+}
+
+nav .menu-btn:checked ~ .menuIcon {
+    display: none;
+}
+
+nav .menu-btn ~ .closeIcon {
+    display: none;
+}
+
+nav .menu-btn:checked ~ .closeIcon {
+    display: block;
+}
+
+nav .menu-btn:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    place-items: center;  
+    background-color: var(--Orange);  
+}
+
+nav>img {
+    z-index: 6;
+}
+
+nav .menu-btn, nav>img {
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem;
+}
+    /* Menu btn end */
+
+nav ul {
+    display: none; 
+    width: 100%;
+    list-style-type: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+    /* Links in menu */
+li a{
+    font-size: 1.5rem;
+    
+}
+  
+li a:visited {
+    text-decoration: none;
+}
+    
+li a:active {
+    border: 1px solid black;
+}
+    /* Lins in menu end */
+
+    /* Opret Bruger */
+.user {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 2px solid var(--hpBGD);
+    border-radius: 2rem;
+    width: 5.8rem;
+    background-color: var(--hpBGD);
+    text-align: center;
+}
+
+.user a {
+    color: var(--Orange);
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+    /* Opret Bruger end */
+
+    /* About Fantasybooks */
+.hero-img {
+    background-image: url(../img/hero\ image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-family: 'Hubballi', cursive;
+    padding: 2rem;
+    text-align: center;
+}
+
+    /* bgd with opacity */
+/*.hero-text {
+    background-color: hsla(240, 14%, 28%, 60%); 
+}*/
+
+    /* Secondhand */
+section .secondhand-titel {
+    display: flex;
+    justify-content: center;
+    text-align: center;    
+}
+
+.secondhand {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.secondhand img {
+    margin: 0.5rem;
+    width: 300px;
+    object-fit: cover;
+}
+
+div a img {
+    box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3)
+}
+/* indsæt pil
+.show a::after {
+    background-image: url(../img/arrow-icon.svg);
+}*/
+
+    /* Månedens Bog */
+.month1 {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--MånedensBogColor);
+    height: 40vh;
+}
+
+.month1 h3 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--BrunTekst);
+}
+
+.month1 p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: start;
+    color: var(--LightgreyTekst);
+}
+
+.month1 a {
+    color: var(--BrunTekst);
+    text-align: center;
+}
+
+/*.month1 a::after {
+   img arraow? 
+}*/
+
+.month2 {
+    background-color: var(--hpBGD);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    object-fit: cover;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.month2 h2 {
+    color: var(--BrunTekst);
+    text-align: center;
+}
+
+.month2 p {
+    color: var(--LightgreyTekst);
+}
+
+.month2 a {
+    color: var(--BrunTekst);
+}
+
+.order {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 2px solid var(--Orange);
+    border-radius: 2rem;
+    width: 7rem;
+    text-align: center;
+    background-color: var(--Orange);
+    box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3)
+}
+
+.order a {
+    font-size: 1rem;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hp {
+    box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3)
+}
+
+    /* Bogklubben */
+.club-img {
+    background-image: url(../img/Cover-Bogklub.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20vh;
+    display: grid;
+    place-items: center;
+}
+
+.club-link {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 2px solid var(--Orange);
+    border-radius: 2rem;
+    width: 11rem;
+    text-align: center;
+    background-color: var(--Orange);
+    box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3)
+}
+
+.club-link a {
+    font-size: 0.9rem;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+    /* Footer  */
+article h4 {
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    background-color: var(--MånedensBogColor);
+}
+
+.filter-orange{
+    width: 4rem;
+    height: auto;
+    filter: invert(50%) sepia(10%) saturate(2476%) hue-rotate(340deg) brightness(100%) contrast(159%);
+}
+
+.footer-img {
+    background-image: url(../img/footer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    display: grid;
+    place-items: center;
+}
