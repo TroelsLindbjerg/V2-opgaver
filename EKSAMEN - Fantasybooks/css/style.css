@@ -10,8 +10,8 @@
 
 /* Titel font & btns: font-family: 'Open Sans', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
-/* Body Text font: font-family: 'Hubballi', cursive; */
-@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+/* Body Text: font-family: 'Work Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 /* Affects the whole site */
 *{
@@ -23,6 +23,7 @@ body {
     background-color: var(--PrimærBgdColor);
 }
 
+    /* ?grid? */
 .grid-container {
     display: grid;
     grid-template-rows: auto;
@@ -36,11 +37,10 @@ body {
         "container5"
         "footer";
 }
-    /*!!!!!!!!!!!!!!!flexbox!!!!!!!!!!!!!!!!!!!*/
+
 .wrapper {
     max-width: 500px;
     margin: auto;
-    padding-bottom: 3rem;
 }
 
 /* Header - Navigation */
@@ -54,14 +54,15 @@ span {
 
 h3 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--BrunTekst);
     text-align: center;
+    padding: 1.5rem;
 }
 
 a:link {
     text-decoration: none;
-    font-family: 'Hubballi', cursive;
+    font-family: 'Work Sans', sans-serif;
     color: var(--BrunTekst);
 }
 
@@ -167,16 +168,20 @@ li a:active {
     height: 35vh;
     display: grid;
     place-items: center;
-    color: white;
-    font-family: 'Hubballi', cursive;
+    font-family: 'Work Sans', sans-serif;
     padding: 2rem;
-    text-align: center;
+    text-align: center; 
 }
 
-    /* bgd with opacity */
-/*.hero-text {
-    background-color: hsla(240, 14%, 28%, 60%); 
-}*/
+.hero-img p {
+    color: white;
+}
+
+.hero-text {
+    line-height: 1.6;
+    /*background-color: hsla(240, 14%, 28%, 60%);*/ 
+    /* ?bgd with opacity? */
+}
 
     /* Secondhand */
 section .secondhand-titel {
@@ -189,6 +194,7 @@ section .secondhand-titel {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    height: 230vh;
 }
 
 .secondhand img {
@@ -198,12 +204,13 @@ section .secondhand-titel {
 }
 
 div a img {
-    box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3)
+    box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3);
 }
 
 .show {
     text-align: center;
     font-size: 1rem;
+    padding-bottom: 1.5rem;
 }
 
 .arrow {
@@ -229,7 +236,7 @@ section div div div a {
     flex-direction: column;
     background-color: var(--MånedensBogColor);
     height: 40vh;
-    font-family: 'Hubballi', cursive;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .month1 h3 {
@@ -253,7 +260,7 @@ section div div div a {
 }
 
 /*.month1 a::after {
-   img arraow? 
+   img arraow? har sat den i html'en
 }*/
 
 .month2 {
@@ -276,13 +283,14 @@ section div div div a {
 
 .month2 p {
     color: var(--LightgreyTekst);
-    font-family: 'Hubballi', cursive;
+    font-family: 'Work Sans', sans-serif;
     text-align: center;
 }
 
 .month2 a {
     color: var(--BrunTekst);
 }
+
 
 .order {
     padding-top: 0.5rem;
@@ -294,7 +302,8 @@ section div div div a {
     width: 7rem;
     text-align: center;
     background-color: var(--Orange);
-    box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3)
+    box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .order a {
@@ -304,7 +313,7 @@ section div div div a {
 }
 
 .hp {
-    box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3)
+    box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3);
 }
 
     /* Bogklubben */
@@ -329,7 +338,8 @@ section div div div a {
     width: 11rem;
     text-align: center;
     background-color: var(--Orange);
-    box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3)
+    box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .club-link a {
@@ -353,9 +363,11 @@ footer {
     background-color: var(--MånedensBogColor);
     color: var(--BrunTekst);
     line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .filter-orange{
+    cursor: pointer;
     width: 3rem;
     height: auto;
     filter: invert(50%) sepia(10%) saturate(2476%) hue-rotate(340deg) brightness(100%) contrast(159%);
@@ -376,14 +388,14 @@ footer {
     font-weight:bold;
     color: var(--BrunTekst);
 }
+
     /* Footer end */
 
     /* Desktop setup */
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .wrapper {
         max-width: 1500px;
         margin: auto;
-        padding-bottom: 3rem;
     }
 
     /* hamburgerMenu not showing */
@@ -427,24 +439,42 @@ footer {
     }
     
     /* Secondhand */
+    .secondhand {
+        height: 60vh;
+    }
+
     .secondhand img {
         width: 300px;
         height: 500px;
     }
 
     /* Månedens bog */
-    .mBook {
-        
+    .month1 {
+        height: 30vh;
     }
 
+    /* ?flexbox eller grid?
+    .mBook {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }*/
+
+
+    /* Bog klubben */
+    .club-img {
+        height: 50vh;
+    }
+
+    /* Footer */
     footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding-left: 6rem;
         text-align: start;
+        height: 40vh;
     }
-
 
     /* ?? Grid af siden ?? 
     .grid-container {
