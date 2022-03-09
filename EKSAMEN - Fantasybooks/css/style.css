@@ -22,8 +22,23 @@
 body {
     background-color: var(--PrimærBgdColor);
 }
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas: 
+        "header"
+        "container1"
+        "container2"
+        "container3"
+        "container4"
+        "container5"
+        "footer";
+}
     /*!!!!!!!!!!!!!!!flexbox!!!!!!!!!!!!!!!!!!!*/
 .wrapper {
+    max-width: 500px;
     margin: auto;
     padding-bottom: 3rem;
 }
@@ -54,6 +69,7 @@ a:link {
 nav {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    font-weight: bold;
 }
 
 nav .menu-btn {
@@ -109,7 +125,7 @@ nav ul {
     /* Links in menu */
 li a{
     font-size: 1.5rem;
-    
+    color: var(--BrunTekst);;
 }
   
 li a:visited {
@@ -129,7 +145,8 @@ li a:active {
     padding-right: 1rem;
     border: 2px solid var(--hpBGD);
     border-radius: 2rem;
-    width: 5.8rem;
+    width: 9rem;
+    margin: 0.5rem;
     background-color: var(--hpBGD);
     text-align: center;
 }
@@ -183,6 +200,24 @@ section .secondhand-titel {
 div a img {
     box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3)
 }
+
+.show {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.arrow {
+    width: 1.5rem;
+    box-shadow: none;
+}
+
+section div div div a {
+    padding-top: 2rem;
+    color: var(--BrunTekst);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 /* indsæt pil
 .show a::after {
     background-image: url(../img/arrow-icon.svg);
@@ -194,6 +229,7 @@ div a img {
     flex-direction: column;
     background-color: var(--MånedensBogColor);
     height: 40vh;
+    font-family: 'Hubballi', cursive;
 }
 
 .month1 h3 {
@@ -207,7 +243,7 @@ div a img {
 .month1 p {
     font-size: 1.2rem;
     line-height: 1.5;
-    text-align: start;
+    text-align: center;
     color: var(--LightgreyTekst);
 }
 
@@ -235,10 +271,13 @@ div a img {
 .month2 h2 {
     color: var(--BrunTekst);
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .month2 p {
     color: var(--LightgreyTekst);
+    font-family: 'Hubballi', cursive;
+    text-align: center;
 }
 
 .month2 a {
@@ -274,7 +313,8 @@ div a img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 20vh;
+    height: 15vh;
+    width: 100%;
     display: grid;
     place-items: center;
 }
@@ -305,13 +345,18 @@ article h4 {
 }
 
 footer {
-    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding-top: 2rem;
     background-color: var(--MånedensBogColor);
+    color: var(--BrunTekst);
+    line-height: 1.6;
 }
 
 .filter-orange{
-    width: 4rem;
+    width: 3rem;
     height: auto;
     filter: invert(50%) sepia(10%) saturate(2476%) hue-rotate(340deg) brightness(100%) contrast(159%);
 }
@@ -322,6 +367,110 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     height: 30vh;
+    width: 400px;
     display: grid;
     place-items: center;
 }
+
+.foot-titel {
+    font-weight:bold;
+    color: var(--BrunTekst);
+}
+    /* Footer end */
+
+    /* Desktop setup */
+@media (min-width: 1024px) {
+    .wrapper {
+        max-width: 1500px;
+        margin: auto;
+        padding-bottom: 3rem;
+    }
+
+    /* hamburgerMenu not showing */
+    nav input.menu-btn {
+        display: none;
+    }
+
+    nav .menu-btn ~ .menuIcon {
+        display: none;
+    }
+
+    nav .menu-btn ~ .closeIcon {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;  
+    } 
+    
+    /* Opret bruger */
+    .user {
+        width: 15rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .user a {
+        padding-top: 0.4rem;
+    }
+
+    /* About Fantasybooks */
+    .hero-text {
+        width: 600px;
+    }
+    
+    /* Secondhand */
+    .secondhand img {
+        width: 300px;
+        height: 500px;
+    }
+
+    /* Månedens bog */
+    .mBook {
+        
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 6rem;
+        text-align: start;
+    }
+
+
+    /* ?? Grid af siden ?? 
+    .grid-container {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "header header header header"
+            "container1 container1 container1 container1"
+            "container1 container1 container1 container1"
+            "container1 container1 container1 container1"
+            "container2 container2 container2 container2"
+            "container2 container2 container2 container2"
+            "container2 container2 container2 container2"
+            "container3 container4 container4 container4"
+            "container3 container4 container4 container4"
+            "container5 container5 container5 container5"
+            "container5 container5 container5 container5"
+            "footer footer footer footer"
+            "footer footer footer footer";
+    }
+    */
+    
+}   /* End of media query */
+
+
+
+
+
+
